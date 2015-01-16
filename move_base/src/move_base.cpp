@@ -918,6 +918,8 @@ namespace move_base {
           runPlanner_ = false;
           lock.unlock();
 
+          ROS_ERROR("MOVE BASE setSucceeded");
+          
           as_->setSucceeded(move_base_msgs::MoveBaseResult(), "Goal reached.");
           return true;
         }
